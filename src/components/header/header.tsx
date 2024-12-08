@@ -14,7 +14,7 @@ const Header = () => {
               href="/"
               className="font-bold text-slate-800 dark:text-slate-50"
             >
-              iTasks
+              myTasks
             </Link>
           </div>
           <nav>
