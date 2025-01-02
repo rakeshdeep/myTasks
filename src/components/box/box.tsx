@@ -4,6 +4,12 @@ import { Countdown } from "@/app/challenges/countdown";
 import { useChallenge } from "@/context/challenge-context";
 import { useTask } from "@/context/task-context";
 
+interface Challenge {
+  id: string;
+  title: string;
+  date: Date;
+}
+
 const Box = () => {
   const { tasks } = useTask();
   const { challenges } = useChallenge();
@@ -103,7 +109,7 @@ const Box = () => {
         </div>
         <div className="w-4/12 border p-1">
           <span className="block text-xl text-blue-400 font-semibold ml-2 mt-3">Challenges</span>
-          {challenges.map((challenge: any, index: number) => {
+          {challenges.map((challenge: Challenge, index: number) => {
             return (
               <div key={index}>
                 <div className="flex justify-between items-center p-3 m-3 border">

@@ -7,14 +7,14 @@ import { Input } from "@/components/ui/input";
 export function DataTableRowTitle({row}:any) {
   const label = labels.find((label) => label.value === row.original.label);
   const [isEditing, setEditing] = useState(false);
-  const [editedTitle, setEditedTitle] = useState(row.getValue("title"));
+  const [editedTitle, setEditedTitle] = useState<string>(row.getValue("title"));
   const { updateTask } = useTask();
 
   const handleTitleClick = () => {
     setEditing(true);
   };
 
-  const handleTitleChange = (e: any) => {
+  const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEditedTitle(e.target.value);
   };
 

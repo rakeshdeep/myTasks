@@ -1,12 +1,12 @@
 import { useTask } from "@/context/task-context";
-import { useState } from "react";
-import {  priorities, statuses } from "../data/data";
+// import { useState } from "react";
+import {  Priorities, priorities } from "../data/data";
+// import { statuses } from "../data/data";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectItemIndicator,
-  SelectItemText,
   SelectTrigger,
   SelectValue,
 } from "@radix-ui/react-select";
@@ -42,7 +42,7 @@ export function DataTableRowPriority({ row }: any) {
           position="popper"
           className="relative z-50 max-h-96 min-w-[8rem] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2"
         >
-          {priorities.map((priority: any, index: number) => (
+          {priorities.map((priority: Priorities, index: number) => (
             <SelectItem
               key={index}
               value={priority.value}

@@ -9,6 +9,7 @@ import {
   QuestionMarkCircledIcon,
   StopwatchIcon,
 } from "@radix-ui/react-icons";
+import React from "react";
 
 export const labels = [
   {
@@ -25,7 +26,13 @@ export const labels = [
   },
 ];
 
-export const statuses = [
+export type Statuses = {
+  value: string;
+  label: string;
+  icon: React.ElementType;
+};
+
+export const statuses: Statuses[] = [
   {
     value: "backlog",
     label: "Backlog",
@@ -53,7 +60,13 @@ export const statuses = [
   },
 ];
 
-export const priorities = [
+export type Priorities = {
+  label: string;
+  value: string;
+  icon: any;
+};
+
+export const priorities: Priorities[] = [
   {
     label: "Urgent",
     value: "urgent",
