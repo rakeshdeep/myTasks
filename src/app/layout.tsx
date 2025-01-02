@@ -39,7 +39,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} light`}
+      data-new-gr-c-s-check-loaded="14.1090.0"
+      data-gr-ext-installed=""
+      >
         <Providers>
           <Header />
           {children}
