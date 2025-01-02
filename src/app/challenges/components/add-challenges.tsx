@@ -8,10 +8,8 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -23,7 +21,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { labels } from "../data/data";
+import { Label, labels } from "../data/data";
 
 import { useChallenge } from "@/context/challenge-context";
 import { DateTimePicker } from "./date-time-picker";
@@ -114,7 +112,7 @@ const AddChallenges = () => {
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    {labels.map((label: any, index: number) => (
+                    {labels.map((label: Label, index: number) => (
                       <SelectItem key={index} value={label.value}>
                         {label.label}
                       </SelectItem>

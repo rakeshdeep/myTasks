@@ -8,10 +8,8 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -24,7 +22,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useTask } from "@/context/task-context";
-import { labels, priorities, statuses } from "../data/data";
+import { labels, Priorities, priorities, Statuses, statuses } from "../data/data";
+import { Label } from "@/app/challenges/data/data";
 
 const FormSchema = z.object({
   title: z.string().min(2, {
@@ -97,7 +96,7 @@ export function AddTask() {
                 </FormControl>
                 <SelectContent>
                   {/* <SelectLabel>Status</SelectLabel> */}
-                  {labels.map((label: any, index: number) => (
+                  {labels.map((label: Label, index: number) => (
                     <SelectItem key={index} value={label.value}>
                       {label.label}
                     </SelectItem>
@@ -120,7 +119,7 @@ export function AddTask() {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  {statuses.map((status: any, index: number) => (
+                  {statuses.map((status: Statuses, index: number) => (
                     <SelectItem key={index} value={status.value}>
                       <div className="flex justify-center items-center gap-3">
                         <status.icon /> {status.label}
@@ -145,7 +144,7 @@ export function AddTask() {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  {priorities.map((priority: any, index: number) => (
+                  {priorities.map((priority: Priorities, index: number) => (
                     <SelectItem key={index} value={priority.value}>
                       <div className="flex justify-center items-center gap-3">
                         <priority.icon /> {priority.label}
