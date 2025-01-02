@@ -4,14 +4,14 @@
 MyTasks is a modern task management application that helps users organize their daily activities, track progress, and manage challenges effectively.
 
 ## Live Demo
-Visit the live application: [MyTasks Live](https://mytasks-nextjs.vercel.app)
+Visit the live application: [MyTasks Live]()
 
 ## How to Fork
 1. Visit the [repository](https://github.com/rakeshdeep/mytasks)
 2. Click the 'Fork' button in the top-right corner
 3. Clone your forked repository:
     ```bash
-    git clone https://github.com/YOUR-USERNAME/mytasks.git
+    git clone https://github.com/rakeshdeep/mytasks.git
     ```
 4. Create a new branch:
     ```bash
